@@ -77,7 +77,8 @@
   },
 {{/if_eq}}
   "dependencies": {
-    "vue": "^2.5.16"{{deps plugins}}
+    "vue": "^2.5.16",
+    "tobiier":"git@bitbucket.org:ibakaidov/tobiier.git"{{deps plugins}}
   },
   "devDependencies": {
     "ajv": "^6.5.0",

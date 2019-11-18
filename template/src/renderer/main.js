@@ -3,6 +3,13 @@ import Vue from 'vue'
 import axios from 'axios'
 {{/isEnabled}}
 
+
+import Tobiier from "../Tobiier";
+import TobiiVue from "../Tobiier/components";
+const { addGlobalPointEvent, addVueMixin } = Tobiier
+
+
+
 import App from './App'
 {{#isEnabled plugins 'vue-router'}}
 import router from './router'
@@ -18,6 +25,13 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
 Vue.config.productionTip = false
+
+
+
+addGlobalPointEvent(ipcRenderer, document);
+addVueMixin(Vue, document)
+Vue.use(TobiiVue)
+
 
 /* eslint-disable no-new */
 new Vue({

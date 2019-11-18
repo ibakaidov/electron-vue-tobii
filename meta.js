@@ -57,7 +57,7 @@ module.exports = {
         type: 'string',
         required: true,
         message: 'Application Id',
-        default: 'com.example.yourapp'
+        default: 'ru.ibakaidov.yourapp'
     },
     appver: {
         type: 'string',
@@ -80,13 +80,13 @@ module.exports = {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
       choices: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron'],
-      default: ['axios', 'vue-electron', 'vue-router', 'vuex', 'vuex-electron']
+      default: ['axios', 'vue-electron']
     },
     eslint: {
       type: 'confirm',
       require: true,
       message: 'Use linting with ESLint?',
-      default: true
+      default: false
     },
     eslintConfig: {
       when: 'eslint',
@@ -113,12 +113,15 @@ module.exports = {
     unit: {
       type: 'confirm',
       message: 'Set up unit testing with Karma + Mocha?',
-      required: true
+      required: true,
+      default:false
     },
     e2e: {
       type: 'confirm',
       message: 'Set up end-to-end testing with Spectron + Mocha?',
-      require: true
+      require: true,
+      default:false
+
     },
     builder: {
       type: 'list',
