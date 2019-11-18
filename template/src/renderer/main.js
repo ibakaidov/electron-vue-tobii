@@ -4,8 +4,8 @@ import axios from 'axios'
 {{/isEnabled}}
 
 
-import Tobiier from "../Tobiier";
-import TobiiVue from "../Tobiier/components";
+import Tobiier from "Tobiier";
+import TobiiVue from "Tobiier/components";
 const { addGlobalPointEvent, addVueMixin } = Tobiier
 
 

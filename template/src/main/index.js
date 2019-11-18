@@ -4,7 +4,7 @@
 {{/if_eq}}
 import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 
-import tobiier from "../tobiier/";
+import tobiier from "tobiier";
   const {addWindow}=tobiier
  
   
